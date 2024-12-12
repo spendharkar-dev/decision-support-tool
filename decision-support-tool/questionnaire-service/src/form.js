@@ -3,6 +3,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const questions = [
     {
+        section: "Round 1",
+        questions: [
+            { label: "Please describe your experience with AI (Round 1):", type: "text", round: "1" },
+            { label: "Select your preferred AI tool (Round 1):", type: "select", options: ["Tool A", "Tool B", "Tool C"], round: "1" },
+            { label: "Select the AI features you use (Round 1):", type: "checkbox", options: ["Feature 1", "Feature 2", "Feature 3"], round: "1" },
+            { label: "Select your role or specify other (Round 1):", type: "radio", options: ["Developer", "Manager", "Analyst", "Other"], round: "1" },
+            { label: "If other, please specify (Round 1):", type: "text", conditional: "Other", round: "1" }
+        ]
+    },
+    {
+        section: "Round 2",
+        questions: [
+            { label: "Please describe your experience with AI (Round 2):", type: "text", round: "2" },
+            { label: "Select your preferred AI tool (Round 2):", type: "select", options: ["Tool A", "Tool B", "Tool C"], round: "2" },
+            { label: "Select the AI features you use (Round 2):", type: "checkbox", options: ["Feature 1", "Feature 2", "Feature 3"], round: "2" },
+            { label: "Select your role or specify other (Round 2):", type: "radio", options: ["Developer", "Manager", "Analyst", "Other"], round: "2" },
+            { label: "If other, please specify (Round 2):", type: "text", conditional: "Other", round: "2" }
+        ]
+    },
+    {
         section: "Free Form Text",
         questions: [
             { label: "Please describe your experience with AI:", type: "text" }
