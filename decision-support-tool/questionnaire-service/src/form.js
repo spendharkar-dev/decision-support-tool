@@ -159,7 +159,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        alert('Form submitted!');
-        // Here you can add code to handle form submission, e.g., sending data to a server
+        const question = document.getElementById('question').value;
+        fetch('/questions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ question })
+        })
+        .then(response => response.text())
+        .then(message => alert(message))
+        .catch(error => console.error('Error submitting question:', error));
     });
 });
